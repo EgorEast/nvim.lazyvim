@@ -51,3 +51,7 @@ map("n", "<leader>lj", ":LiveShareJoin", { desc = "Join a Live Share session" })
 map("n", "<leader>lf", ":!eslint_d % --fix<CR>", { desc = "Eslint fix current buffer" })
 
 map("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- Comment
+map("n", "<leader>c/", "gcc", { desc = "toggle comment", remap = true })
+map("v", "<leader>c/", "gc", { desc = "toggle comment", remap = true })
