@@ -5,4 +5,5 @@
 local map = vim.keymap.set
 
 --map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
+map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save current tab" })
+map("n", "<leader>ww", "<cmd>w<CR>", { desc = "Save current tab" })
