@@ -1,6 +1,4 @@
 return {
-  {
-    "kevinhwang91/nvim-bqf",
-    lazy = false,
-  },
+  "kevinhwang91/nvim-bqf",
+  lazy = false,
 }
