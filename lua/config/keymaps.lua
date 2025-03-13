@@ -8,3 +8,5 @@ local map = vim.keymap.set
 map("n", "<leader>w", ":w<CR>", { desc = "Save current tab" })
 map("n", "<leader>ww", ":w<CR>", { desc = "Save current tab" })
 map("n", "<leader>wa", ":wa<CR>", { desc = "Save all changed files" })
+
+map("n", "dm", ":delmarks", { desc = "Delete marks" })
