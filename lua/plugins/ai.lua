@@ -38,14 +38,38 @@ return {
       -- },
     },
   },
+  --
+  -- https://github.com/sourcegraph/sg.nvim
   -- {
-  --   "joshuavial/aider.nvim",
-  --   opts = {
-  --     -- your configuration comes here
-  --     -- if you don't want to use the default settings
-  --     auto_manage_context = true, -- automatically manage buffer context
-  --     default_bindings = true, -- use default <leader>A keybindings
-  --     debug = false, -- enable debug logging
+  --   "sourcegraph/sg.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
   --   },
+  --   config = function()
+  --     -- Sourcegraph configuration. All keys are optional
+  --     require("sg").setup({
+  --       -- Pass your own custom attach function
+  --       --    If you do not pass your own attach function, then the following maps are provide:
+  --       --        - gd -> goto definition
+  --       --        - gr -> goto references
+  --       -- on_attach = your_custom_lsp_attach_function
+  --     })
+  --   end,
   -- },
+  {
+    "Exafunction/codeium.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({
+        virtual_text = {
+          enabled = true,
+        },
+      })
+    end,
+  },
 }
