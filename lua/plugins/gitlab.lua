@@ -11,6 +11,10 @@ return {
     require("gitlab.server").build(true)
   end, -- Builds the Go binary
   config = function()
-    require("gitlab").setup()
+    require("gitlab").setup({
+      auth_provider = function()
+        return "", "", nil
+      end,
+    })
   end,
 }
