@@ -11,4 +11,4 @@ map("n", "<leader>wa", ":wa<CR>", { desc = "Save all changed files" })
 
 map("n", "<leader>a", "", { desc = "AI" })
 
-map("n", "dm", ":delmarks", { desc = "Delete marks" })
+map("n", "dm", ":delmarks ", { desc = "Delete marks" })

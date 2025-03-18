@@ -54,6 +54,23 @@ return {
       })
     end,
   },
+  -- https://github.com/jackMort/ChatGPT.nvim
+  -- {
+  --   "jackMort/ChatGPT.nvim",
+  --   event = "VeryLazy",
+  --   keys = {
+  --     { "<leader>ag", ":ChatGPT<cr>", desc = "Open ChatGPT" },
+  --   },
+  --   config = function()
+  --     require("chatgpt").setup()
+  --   end,
+  --   dependencies = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "folke/trouble.nvim", -- optional
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  -- },
   -- https://github.com/u3ih/gemini.nvim?ysclid=m8coek9gzf44878956
   -- {
   --   "gera2ld/ai.nvim",
