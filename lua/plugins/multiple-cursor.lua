@@ -1,3 +1,4 @@
+-- https://github.com/brenton-leighton/multiple-cursors.nvim
 return {
   "brenton-leighton/multiple-cursors.nvim",
   version = "*", -- Use the latest tagged version
@@ -13,27 +14,29 @@ return {
 
     {
       "<Leader>m",
+      "",
+      desc = "Multiple cursor",
+    },
+    {
+      "<Leader>mm",
       ":MultipleCursorsAddVisualArea<CR>",
       mode = { "x" },
       desc = "Add cursors to the lines of the visual area",
     },
-
-    { "<Leader>a", ":MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
+    { "<Leader>ma", ":MultipleCursorsAddMatches<CR>", mode = { "n", "x" }, desc = "Add cursors to cword" },
     {
-      "<Leader>A",
+      "<Leader>mA",
       ":MultipleCursorsAddMatchesV<CR>",
       mode = { "n", "x" },
       desc = "Add cursors to cword in previous area",
     },
-
     {
-      "<Leader>d",
+      "<Leader>md",
       ":MultipleCursorsAddJumpNextMatch<CR>",
       mode = { "n", "x" },
       desc = "Add cursor and jump to next cword",
     },
-    { "<Leader>D", ":MultipleCursorsJumpNextMatch<CR>", mode = { "n", "x" }, desc = "Jump to next cword" },
-
-    { "<Leader>l", ":MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
+    { "<Leader>mD", ":MultipleCursorsJumpNextMatch<CR>", mode = { "n", "x" }, desc = "Jump to next cword" },
+    { "<Leader>ml", ":MultipleCursorsLock<CR>", mode = { "n", "x" }, desc = "Lock virtual cursors" },
   },
 }
