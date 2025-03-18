@@ -1,4 +1,5 @@
 return {
+  -- https://github.com/GeorgesAlkhouri/nvim-aider
   {
     "GeorgesAlkhouri/nvim-aider",
     cmd = {
@@ -17,26 +18,7 @@ return {
       { "<leader>a+", ":AiderTreeAddFile<cr>", desc = "Add File from Tree to Aider", ft = "NvimTree" },
       { "<leader>a-", ":AiderTreeDropFile<cr>", desc = "Drop File from Tree from Aider", ft = "NvimTree" },
     },
-    dependencies = {
-      "folke/snacks.nvim",
-      --- The below dependencies are optional
-      -- "catppuccin/nvim",
-      -- "nvim-tree/nvim-tree.lua",
-      --- Neo-tree integration
-      -- {
-      --   "nvim-neo-tree/neo-tree.nvim",
-      --   opts = function(_, opts)
-      --     -- Example mapping configuration (already set by default)
-      --     -- opts.window = {
-      --     --   mappings = {
-      --     --     ["+"] = { "nvim_aider_add", desc = "add to aider" },
-      --     --     ["-"] = { "nvim_aider_drop", desc = "drop from aider" }
-      --     --   }
-      --     -- }
-      --     require("nvim_aider.neo_tree").setup(opts)
-      --   end,
-      -- },
-    },
+    dependencies = { "folke/snacks.nvim" },
   },
   -- https://github.com/sourcegraph/sg.nvim
   {
@@ -56,6 +38,7 @@ return {
       })
     end,
   },
+  -- https://github.com/Exafunction/codeium.nvim
   {
     "Exafunction/codeium.nvim",
     lazy = false,
@@ -71,8 +54,8 @@ return {
       })
     end,
   },
+  -- https://github.com/u3ih/gemini.nvim?ysclid=m8coek9gzf44878956
   -- {
-  --   -- https://github.com/u3ih/gemini.nvim?ysclid=m8coek9gzf44878956
   --   "gera2ld/ai.nvim",
   --   dependencies = "nvim-lua/plenary.nvim",
   --   opts = {
