@@ -16,6 +16,7 @@ return {
       "chrome-debug-adapter",
       "firefox-debug-adapter",
       "oxlint",
+      "emmet-language-server",
     },
   },
 }

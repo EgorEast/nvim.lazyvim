@@ -7,16 +7,17 @@ return {
       "AiderHealth",
     },
     keys = {
-      { "<leader>a/", ":AiderTerminalToggle<cr>", desc = "Open Aider" },
-      { "<leader>as", ":AiderTerminalSend<cr>", desc = "Send to Aider", mode = { "n", "v" } },
-      { "<leader>ac", ":AiderQuickSendCommand<cr>", desc = "Send Command To Aider" },
-      { "<leader>ab", ":AiderQuickSendBuffer<cr>", desc = "Send Buffer To Aider" },
-      { "<leader>a+", ":AiderQuickAddFile<cr>", desc = "Add File to Aider" },
-      { "<leader>a-", ":AiderQuickDropFile<cr>", desc = "Drop File from Aider" },
-      { "<leader>ar", ":AiderQuickReadOnlyFile<cr>", desc = "Add File as Read-Only" },
+      { "<leader>aa", "", desc = "Aider" },
+      { "<leader>aa/", ":AiderTerminalToggle<cr>", desc = "Open Aider" },
+      { "<leader>aas", ":AiderTerminalSend<cr>", desc = "Send to Aider", mode = { "n", "v" } },
+      { "<leader>aac", ":AiderQuickSendCommand<cr>", desc = "Send Command To Aider" },
+      { "<leader>aab", ":AiderQuickSendBuffer<cr>", desc = "Send Buffer To Aider" },
+      { "<leader>aa+", ":AiderQuickAddFile<cr>", desc = "Add File to Aider" },
+      { "<leader>aa-", ":AiderQuickDropFile<cr>", desc = "Drop File from Aider" },
+      { "<leader>aar", ":AiderQuickReadOnlyFile<cr>", desc = "Add File as Read-Only" },
       -- Example nvim-tree.lua integration if needed
-      { "<leader>a+", ":AiderTreeAddFile<cr>", desc = "Add File from Tree to Aider", ft = "NvimTree" },
-      { "<leader>a-", ":AiderTreeDropFile<cr>", desc = "Drop File from Tree from Aider", ft = "NvimTree" },
+      { "<leader>aa+", ":AiderTreeAddFile<cr>", desc = "Add File from Tree to Aider", ft = "NvimTree" },
+      { "<leader>aa-", ":AiderTreeDropFile<cr>", desc = "Drop File from Tree from Aider", ft = "NvimTree" },
     },
     dependencies = { "folke/snacks.nvim" },
   },
@@ -29,13 +30,7 @@ return {
     },
     config = function()
       -- Sourcegraph configuration. All keys are optional
-      require("sg").setup({
-        -- Pass your own custom attach function
-        --    If you do not pass your own attach function, then the following maps are provide:
-        --        - gd -> goto definition
-        --        - gr -> goto references
-        -- on_attach = your_custom_lsp_attach_function
-      })
+      require("sg").setup({})
     end,
   },
   -- https://github.com/Exafunction/codeium.nvim
