@@ -4,5 +4,6 @@
 local opt = vim.opt
 
 opt.spelllang = { "en", "ru" }
-opt.spell = false
+opt.spell = true
+opt.spellsuggest = "double"
 opt.wrap = true
