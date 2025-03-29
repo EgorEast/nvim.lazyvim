@@ -22,17 +22,17 @@ return {
     dependencies = { "folke/snacks.nvim" },
   },
   -- https://github.com/sourcegraph/sg.nvim
-  {
-    "sourcegraph/sg.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      -- Sourcegraph configuration. All keys are optional
-      require("sg").setup({})
-    end,
-  },
+  -- {
+  --   "sourcegraph/sg.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim",
+  --   },
+  --   config = function()
+  --     -- Sourcegraph configuration. All keys are optional
+  --     require("sg").setup({})
+  --   end,
+  -- },
   -- https://github.com/Exafunction/codeium.nvim
   {
     "Exafunction/codeium.nvim",
