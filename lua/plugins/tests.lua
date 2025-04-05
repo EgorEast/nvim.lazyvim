@@ -26,7 +26,7 @@ return {
     "nvim-lua/plenary.nvim",
     "antoinemadec/FixCursorHold.nvim",
     "nvim-treesitter/nvim-treesitter",
-    "haydenmeade/neotest-jest",
+    -- "haydenmeade/neotest-jest",
     "marilari88/neotest-vitest",
   },
 }

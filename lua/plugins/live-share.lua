@@ -6,7 +6,14 @@ return {
   keys = {
     { "<leader>l", "", desc = "+Live Share" },
     { "<leader>ls", ":LiveShareServer<CR>", desc = "Start a Live Share server" },
-    { "<leader>lj", ":LiveShareJoin", desc = "Join a Live Share session" },
+    {
+      "<leader>lj",
+      function()
+        local url = vim.fn.input("Enter url to join: ")
+        vim.cmd("LiveShareJoin " .. url)
+      end,
+      desc = "Join a Live Share session",
+    },
   },
   config = function()
     vim.g.instant_username = "egoreast"

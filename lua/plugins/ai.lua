@@ -36,7 +36,6 @@ return {
   -- https://github.com/Exafunction/codeium.nvim
   {
     "Exafunction/codeium.nvim",
-    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "hrsh7th/nvim-cmp",

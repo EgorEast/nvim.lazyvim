@@ -11,4 +11,15 @@ map("n", "<leader>wa", ":wa<CR>", { desc = "Save all changed files" })
 
 map("n", "<leader>a", "", { desc = "AI" })
 
-map("n", "dm", ":delmarks ", { desc = "Delete marks" })
+map("n", "<leader>'", "", { desc = "Marks" })
+
+local del_marks = function()
+  local marks = vim.fn.input("Delete marks: ")
+  vim.cmd("delmarks " .. marks)
+end
+map("n", "<leader>'d", del_marks, {
+  desc = "Delete marks",
+})
+map("n", "dm", del_marks, {
+  desc = "Delete marks",
+})
