@@ -7,7 +7,6 @@ return {
       "firefox-debug-adapter",
       "js-debug-adapter",
       "lua-language-server",
-      "oxlint",
       "shellcheck",
       "shfmt",
       "stylua",

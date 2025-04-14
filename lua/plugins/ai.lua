@@ -36,17 +36,11 @@ return {
   -- https://github.com/Exafunction/codeium.nvim
   {
     "Exafunction/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
+    opts = {
+      virtual_text = {
+        enabled = true,
+      },
     },
-    config = function()
-      require("codeium").setup({
-        virtual_text = {
-          enabled = true,
-        },
-      })
-    end,
   },
   -- https://github.com/jackMort/ChatGPT.nvim
   -- {
