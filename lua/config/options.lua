@@ -9,3 +9,5 @@ opt.spellfile = config_path .. "/spell/en.utf-8.add" .. "," .. config_path .. "/
 opt.spell = true
 opt.spellsuggest = "double"
 opt.wrap = true
+
+vim.g.lazyvim_eslint_auto_format = true
