@@ -10,6 +10,11 @@ return {
       "shellcheck",
       "shfmt",
       "stylua",
+      "css-lsp",
+      "html-lsp",
+      "json-lsp",
+      "cssmodules-language-server",
+      "css-variables-language-server",
     },
   },
 }
