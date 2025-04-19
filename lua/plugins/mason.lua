@@ -13,7 +13,6 @@ return {
       "css-lsp",
       "html-lsp",
       "json-lsp",
-      "cssmodules-language-server",
       "css-variables-language-server",
     },
   },
