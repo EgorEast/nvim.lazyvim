@@ -33,29 +33,20 @@ return {
   --     require("sg").setup({})
   --   end,
   -- },
-  -- https://github.com/Exafunction/codeium.nvim
   {
-    "Exafunction/codeium.nvim",
-    opts = {
-      virtual_text = {
-        enabled = true,
-      },
+    "Exafunction/windsurf.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
     },
+    config = function()
+      require("codeium").setup({
+        virtual_text = {
+          enabled = true,
+        },
+      })
+    end,
   },
-  -- {
-  --   "Exafunction/windsurf.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "hrsh7th/nvim-cmp",
-  --   },
-  --   config = function()
-  --     require("codeium").setup({
-  --       virtual_text = {
-  --         enabled = true,
-  --       },
-  --     })
-  --   end,
-  -- },
   -- https://github.com/jackMort/ChatGPT.nvim
   -- {
   --   "jackMort/ChatGPT.nvim",
