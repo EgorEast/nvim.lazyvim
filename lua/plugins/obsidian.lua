@@ -62,7 +62,10 @@ return {
         path = "~/Yandex.Disk/Obsidian",
         overrides = {
           attachments = {
-            img_folder = "~/Yandex.Disk/Obsidian/Исходники",
+            img_folder = "Исходники",
+          },
+          templates = {
+            folder = "Шаблоны",
           },
         },
       },
