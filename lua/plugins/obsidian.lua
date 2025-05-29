@@ -22,9 +22,17 @@ return {
       {
         name = "obsidian",
         path = "~/Yandex.Disk/Obsidian",
+        overrides = {
+          attachments = {
+            img_folder = "~/Yandex.Disk/Obsidian/Исходники",
+          },
+        },
       },
     },
+    -- Where to put new notes. Valid options are
+    --  * "current_dir" - put new notes in same directory as the current buffer.
+    --  * "notes_subdir" - put new notes in the default notes subdirectory.
+    new_notes_location = "current_dir",
 
-    -- see below for full list of options 👇
   },
 }
