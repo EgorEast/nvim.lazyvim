@@ -232,5 +232,14 @@ return {
       -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
       vim.ui.open(url) -- need Neovim 0.10.0+
     end,
+
+    -- Optional, by default when you use `:ObsidianFollowLink` on a link to an image
+    -- file it will be ignored but you can customize this behavior here.
+    ---@param img string
+    follow_img_func = function(img)
+      -- vim.fn.jobstart({ "qlmanage", "-p", img }) -- Mac OS quick look preview
+      vim.fn.jobstart({ "xdg-open", img }) -- linux
+      -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
+    end,
   },
 }
