@@ -194,5 +194,10 @@ return {
       -- return require("obsidian.util").wiki_link_id_prefix(opts)
       return require("obsidian.util").wiki_link_alias_only(opts)
     end,
+
+    -- Optional, customize how markdown links are formatted.
+    markdown_link_func = function(opts)
+      return require("obsidian.util").markdown_link(opts)
+    end,
   },
 }
