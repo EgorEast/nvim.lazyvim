@@ -1,3 +1,4 @@
+-- https://github.com/epwalsh/obsidian.nvim
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
@@ -87,6 +88,33 @@ return {
       date_format = "%d-%m-%Y",
       -- Optional, if you want to change the date format of the default alias of daily notes.
       alias_format = nil,
+    },
+
+    -- Optional, configure key mappings. These are the defaults. If you don't want to set any keymappings this
+    -- way then set 'mappings = {}'.
+    mappings = {
+      -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
+      ["gf"] = {
+        action = function()
+          return require("obsidian").util.gf_passthrough()
+        end,
+        opts = { noremap = false, expr = true, buffer = true },
+      },
+      -- Toggle check-boxes.
+      -- ["<leader>ch"] = {
+      --   action = function()
+      --     return require("obsidian").util.toggle_checkbox()
+      --   end,
+      --   opts = { buffer = true },
+      --   desc = "Toggle checkbox",
+      -- },
+      -- Smart action depending on context, either follow link or toggle checkbox.
+      ["<cr>"] = {
+        action = function()
+          return require("obsidian").util.smart_action()
+        end,
+        opts = { buffer = true, expr = true },
+      },
     },
   },
 }
