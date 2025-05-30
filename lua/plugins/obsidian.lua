@@ -241,5 +241,53 @@ return {
       vim.fn.jobstart({ "xdg-open", img }) -- linux
       -- vim.cmd(':silent exec "!start ' .. url .. '"') -- Windows
     end,
+
+    -- -- Optional, define your own callbacks to further customize behavior.
+    -- callbacks = {
+    --   -- Runs at the end of `require("obsidian").setup()`.
+    --   ---@param client obsidian.Client
+    --   post_setup = function(client) end,
+    --
+    --   -- Runs anytime you enter the buffer for a note.
+    --   ---@param client obsidian.Client
+    --   ---@param note obsidian.Note
+    --   enter_note = function(client, note) end,
+    --
+    --   -- Runs anytime you leave the buffer for a note.
+    --   ---@param client obsidian.Client
+    --   ---@param note obsidian.Note
+    --   leave_note = function(client, note) end,
+    --
+    --   -- Runs right before writing the buffer for a note.
+    --   ---@param client obsidian.Client
+    --   ---@param note obsidian.Note
+    --   pre_write_note = function(client, note) end,
+    --
+    --   -- Runs anytime the workspace is set/changed.
+    --   ---@param client obsidian.Client
+    --   ---@param workspace obsidian.Workspace
+    --   post_set_workspace = function(client, workspace) end,
+    -- },
+
+    -- Specify how to handle attachments.
+    attachments = {
+      -- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
+      ---@return string
+      img_name_func = function()
+        -- Prefix image names with timestamp.
+        return string.format("%s-", os.time())
+      end,
+
+      -- A function that determines the text to insert in the note when pasting an image.
+      -- It takes two arguments, the `obsidian.Client` and an `obsidian.Path` to the image file.
+      -- This is the default implementation.
+      ---@param client obsidian.Client
+      ---@param path obsidian.Path the absolute path to the image file
+      ---@return string
+      img_text_func = function(client, path)
+        path = client:vault_relative_path(path) or path
+        return string.format("![[%s]]", path.name, path)
+      end,
+    },
   },
 }
