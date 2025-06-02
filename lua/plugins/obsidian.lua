@@ -76,6 +76,12 @@ return {
           },
         },
       },
+      {
+        name = "buf-parent",
+        path = function()
+          return assert(vim.fs.dirname(vim.api.nvim_buf_get_name(0)))
+        end,
+      },
     },
     -- Where to put new notes. Valid options are
     --  * "current_dir" - put new notes in same directory as the current buffer.
@@ -83,6 +89,8 @@ return {
     new_notes_location = "current_dir",
 
     daily_notes = {
+      folder = "daily-notes",
+      default_tags = {},
       -- Optional, if you want to change the date format for the ID of daily notes.
       -- date_format = "%d-%m-%Y",
       date_format = "%d.%m.%Y",
@@ -119,6 +127,7 @@ return {
 
     -- Optional, for templates (see below).
     templates = {
+      folder = "templates",
       date_format = "%d.%m.%Y",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
@@ -279,6 +288,7 @@ return {
 
     -- Specify how to handle attachments.
     attachments = {
+      img_folder = "attachments/images",
       -- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
       ---@return string
       img_name_func = function()
