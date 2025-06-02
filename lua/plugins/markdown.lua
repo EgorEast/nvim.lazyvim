@@ -43,6 +43,12 @@ return {
           highlight = "RenderMarkdownError",
           scope_highlight = "RenderMarkdownError",
         },
+        todo = {
+          raw = "[-]",
+          rendered = "󰥔",
+          highlight = "RenderMarkdownTodo",
+          scope_highlight = "RenderMarkdownTodo",
+        },
       },
     },
     file_types = { "markdown", "vimwiki" },
