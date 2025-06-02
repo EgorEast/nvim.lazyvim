@@ -3,7 +3,7 @@ return {
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
   opts = {
-    completions = { enabled = true },
+    completions = { enabled = true, lsp = { enabled = true }, blink = { enabled = true } },
     enabled = true,
     checkbox = {
       enabled = true,
