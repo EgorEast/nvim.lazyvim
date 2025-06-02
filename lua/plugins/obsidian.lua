@@ -85,7 +85,7 @@ return {
     daily_notes = {
       -- Optional, if you want to change the date format for the ID of daily notes.
       -- date_format = "%d-%m-%Y",
-      date_format = "%d-%m-%Y",
+      date_format = "%d.%m.%Y",
       -- Optional, if you want to change the date format of the default alias of daily notes.
       alias_format = nil,
     },
@@ -119,7 +119,7 @@ return {
 
     -- Optional, for templates (see below).
     templates = {
-      date_format = "%d-%m-%Y",
+      date_format = "%d.%m.%Y",
       time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
       substitutions = {},
