@@ -3,6 +3,8 @@ return {
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
   opts = {
+    completions = { enabled = true },
+    enabled = false,
     checkbox = {
       enabled = true,
       right_pad = 6,
