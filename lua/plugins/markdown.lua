@@ -14,7 +14,7 @@ return {
         -- Highlight for the unchecked icon.
         highlight = "RenderMarkdownUnchecked",
         -- Highlight for item associated with unchecked checkbox.
-        scope_highlight = "RenderMarkdownUnchecked",
+        scope_highlight = nil,
       },
       checked = {
         -- Replaces '[x]' of 'task_list_marker_checked'.
@@ -22,32 +22,32 @@ return {
         -- Highlight for the checked icon.
         highlight = "RenderMarkdownChecked",
         -- Highlight for item associated with checked checkbox.
-        scope_highlight = "RenderMarkdownChecked",
+        scope_highlight = "@markup.strikethrough",
       },
       custom = {
         followup = {
           raw = "[>]",
           rendered = "",
           highlight = "RenderMarkdownBullet",
-          scope_highlight = "RenderMarkdownBullet",
+          scope_highlight = nil,
         },
         canceled = {
           raw = "[~]",
           rendered = "󰰱",
           highlight = "RenderMarkdownTableHead",
-          scope_highlight = "RenderMarkdownTableHead",
+          scope_highlight = nil,
         },
         warning = {
           raw = "[!]",
           rendered = "",
           highlight = "RenderMarkdownError",
-          scope_highlight = "RenderMarkdownError",
+          scope_highlight = nil,
         },
         todo = {
           raw = "[-]",
           rendered = "󰥔",
           highlight = "RenderMarkdownTodo",
-          scope_highlight = "RenderMarkdownTodo",
+          scope_highlight = nil,
         },
       },
     },
