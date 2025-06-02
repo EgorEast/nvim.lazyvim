@@ -112,5 +112,21 @@ return {
       end,
       desc = "Pomodoro Stop",
     },
+    {
+      "<leader>ph",
+      function()
+        local timerId = vim.fn.input("Enter timer id (optional): ")
+        vim.cmd("TimerHide " .. timerId)
+      end,
+      desc = "Pomodoro Hide",
+    },
+    {
+      "<leader>pH",
+      function()
+        local timerId = vim.fn.input("Enter timer id (optional): ")
+        vim.cmd("TimerShow " .. timerId)
+      end,
+      desc = "Pomodoro Show",
+    },
   },
 }
