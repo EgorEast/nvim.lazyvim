@@ -36,7 +36,7 @@ return {
     { "<leader>od", "", mode = { "n", "x" }, desc = "Daily notes" }, -- :ObsidianToday for getting a picker list of all notes created today.
     { "<leader>odt", ":ObsidianToday<CR>", mode = { "n", "x" }, desc = "Today" }, -- :ObsidianToday for getting a picker list of all notes created today.
     { "<leader>ody", ":ObsidianYesterday<CR>", mode = { "n", "x" }, desc = "Yesterday" }, -- :ObsidianYesterday for getting a picker list of all notes created yesterday.
-    { "<leader>odo", ":ObsidianTomorrow<CR>", mode = { "n", "x" }, desc = "Tomorrow" }, -- :ObsidianTomorrow for getting a picker list of all notes created tomorrow.
+    { "<leader>odT", ":ObsidianTomorrow<CR>", mode = { "n", "x" }, desc = "Tomorrow" }, -- :ObsidianTomorrow for getting a picker list of all notes created tomorrow.
     { "<leader>odd", ":ObsidianDailies<CR>", mode = { "n", "x" }, desc = "Dailies" }, -- :ObsidianDailies for getting a picker list of all daily notes.
     { "<leader>oe", ":ObsidianExtractNote<CR>", mode = { "n", "x" }, desc = "Extract note" }, -- :ObsidianExtractNote [TITLE] to extract the visually selected text into a new note and link to it.
     { "<leader>of", ":ObsidianFollowLink<CR>", mode = { "n", "x" }, desc = "Follow link" }, -- :ObsidianFollowLink [vsplit|hsplit] to follow a note reference under the cursor, optionally opening it in a vertical or horizontal split.
