@@ -10,4 +10,6 @@ opt.spell = true
 opt.spellsuggest = "double"
 opt.wrap = true
 
+opt.clipboard = "unnamedplus"
+
 vim.g.lazyvim_eslint_auto_format = true
